@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		5455E4430570C46B62C51B9A /* libPods-HeyThere-HeyThereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 325F70E8D85FFA39B133BDD8 /* libPods-HeyThere-HeyThereTests.a */; };
+		58449B0119018269F171CEDA /* libPods-HeyThere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98B3933F135D83FA4C25EF /* libPods-HeyThere.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C662B5D19DFB43B7611F794E /* libPods-HeyThere.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCDDDA579043F8F7F8908B1 /* libPods-HeyThere.a */; };
+		A56D32E240C43B2B7422FCEE /* libPods-HeyThere-HeyThereTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C2937854565154B31AA039 /* libPods-HeyThere-HeyThereTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* HeyThereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeyThereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HeyThereTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeyThereTests.m; sourceTree = "<group>"; };
+		0923172B0A66A926EB42A10A /* Pods-HeyThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere.release.xcconfig"; path = "Target Support Files/Pods-HeyThere/Pods-HeyThere.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HeyThere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeyThere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HeyThere/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = HeyThere/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HeyThere/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HeyThere/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HeyThere/main.m; sourceTree = "<group>"; };
-		2E1A74A63B9DF53B71771678 /* Pods-HeyThere.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere.release.xcconfig"; path = "Target Support Files/Pods-HeyThere/Pods-HeyThere.release.xcconfig"; sourceTree = "<group>"; };
-		325F70E8D85FFA39B133BDD8 /* libPods-HeyThere-HeyThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeyThere-HeyThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DCDDDA579043F8F7F8908B1 /* libPods-HeyThere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeyThere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E98B3933F135D83FA4C25EF /* libPods-HeyThere.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeyThere.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FA2C8A5C797EB442FA8CD7E /* Pods-HeyThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere.debug.xcconfig"; path = "Target Support Files/Pods-HeyThere/Pods-HeyThere.debug.xcconfig"; sourceTree = "<group>"; };
+		73C2937854565154B31AA039 /* libPods-HeyThere-HeyThereTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeyThere-HeyThereTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HeyThere/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		90B21CC7A34D50DC42185439 /* Pods-HeyThere-HeyThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere-HeyThereTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CB08A1110FECFD7B00F67C78 /* Pods-HeyThere.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere.debug.xcconfig"; path = "Target Support Files/Pods-HeyThere/Pods-HeyThere.debug.xcconfig"; sourceTree = "<group>"; };
+		94BDBBE8B8641A1B38235D89 /* Pods-HeyThere-HeyThereTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere-HeyThereTests.debug.xcconfig"; path = "Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF451FD09825793403756C28 /* Pods-HeyThere-HeyThereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere-HeyThereTests.release.xcconfig"; path = "Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EDC229FB8DC742B92DB6F8BF /* Pods-HeyThere-HeyThereTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeyThere-HeyThereTests.release.xcconfig"; path = "Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5455E4430570C46B62C51B9A /* libPods-HeyThere-HeyThereTests.a in Frameworks */,
+				A56D32E240C43B2B7422FCEE /* libPods-HeyThere-HeyThereTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C662B5D19DFB43B7611F794E /* libPods-HeyThere.a in Frameworks */,
+				58449B0119018269F171CEDA /* libPods-HeyThere.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				3DCDDDA579043F8F7F8908B1 /* libPods-HeyThere.a */,
-				325F70E8D85FFA39B133BDD8 /* libPods-HeyThere-HeyThereTests.a */,
+				5E98B3933F135D83FA4C25EF /* libPods-HeyThere.a */,
+				73C2937854565154B31AA039 /* libPods-HeyThere-HeyThereTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CB08A1110FECFD7B00F67C78 /* Pods-HeyThere.debug.xcconfig */,
-				2E1A74A63B9DF53B71771678 /* Pods-HeyThere.release.xcconfig */,
-				90B21CC7A34D50DC42185439 /* Pods-HeyThere-HeyThereTests.debug.xcconfig */,
-				EDC229FB8DC742B92DB6F8BF /* Pods-HeyThere-HeyThereTests.release.xcconfig */,
+				6FA2C8A5C797EB442FA8CD7E /* Pods-HeyThere.debug.xcconfig */,
+				0923172B0A66A926EB42A10A /* Pods-HeyThere.release.xcconfig */,
+				94BDBBE8B8641A1B38235D89 /* Pods-HeyThere-HeyThereTests.debug.xcconfig */,
+				DF451FD09825793403756C28 /* Pods-HeyThere-HeyThereTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HeyThereTests" */;
 			buildPhases = (
-				392470E7B467EEB420107B04 /* [CP] Check Pods Manifest.lock */,
+				F2A2592C31D09BDD0F6D8AAC /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				9600A19D76F5C4303D563DE0 /* [CP] Embed Pods Frameworks */,
-				4882E652A9EF35B98177438A /* [CP] Copy Pods Resources */,
+				C2A8866FF2603E3106A1F368 /* [CP] Embed Pods Frameworks */,
+				9985A6C088673C0B9E1D21EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HeyThere" */;
 			buildPhases = (
-				549E61BB940CBA87D8CB92C2 /* [CP] Check Pods Manifest.lock */,
+				9CE20B6727E73F900CD2EA3C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				020D189503B2A0D35CC8F02B /* [CP] Embed Pods Frameworks */,
-				4EA128C01B4FCBA50E5F1052 /* [CP] Copy Pods Resources */,
+				93D6513C16B44A4EE018928C /* [CP] Embed Pods Frameworks */,
+				2E3A585556E7260AFD98ADB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,63 +266,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		020D189503B2A0D35CC8F02B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		392470E7B467EEB420107B04 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HeyThere-HeyThereTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4882E652A9EF35B98177438A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4EA128C01B4FCBA50E5F1052 /* [CP] Copy Pods Resources */ = {
+		2E3A585556E7260AFD98ADB9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,7 +283,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		549E61BB940CBA87D8CB92C2 /* [CP] Check Pods Manifest.lock */ = {
+		93D6513C16B44A4EE018928C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyThere/Pods-HeyThere-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9985A6C088673C0B9E1D21EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CE20B6727E73F900CD2EA3C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +339,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9600A19D76F5C4303D563DE0 /* [CP] Embed Pods Frameworks */ = {
+		C2A8866FF2603E3106A1F368 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,6 +354,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeyThere-HeyThereTests/Pods-HeyThere-HeyThereTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2A2592C31D09BDD0F6D8AAC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeyThere-HeyThereTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -430,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90B21CC7A34D50DC42185439 /* Pods-HeyThere-HeyThereTests.debug.xcconfig */;
+			baseConfigurationReference = 94BDBBE8B8641A1B38235D89 /* Pods-HeyThere-HeyThereTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -457,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDC229FB8DC742B92DB6F8BF /* Pods-HeyThere-HeyThereTests.release.xcconfig */;
+			baseConfigurationReference = DF451FD09825793403756C28 /* Pods-HeyThere-HeyThereTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -481,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB08A1110FECFD7B00F67C78 /* Pods-HeyThere.debug.xcconfig */;
+			baseConfigurationReference = 6FA2C8A5C797EB442FA8CD7E /* Pods-HeyThere.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -507,7 +507,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E1A74A63B9DF53B71771678 /* Pods-HeyThere.release.xcconfig */;
+			baseConfigurationReference = 0923172B0A66A926EB42A10A /* Pods-HeyThere.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

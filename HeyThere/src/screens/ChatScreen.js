@@ -1,29 +1,27 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useNavigation } from "@react-navigation/native";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { GiftedChat } from "react-native-gifted-chat";
 import uuid from 'react-native-uuid';
+import { DataContext } from "../../App";
 
 const ChatScreen = ({ route }) => {
 
-    const { allData, index, setAllData } = route.params;
+    const { index } = route.params;
+    const { allData, setAllData } = useContext(DataContext);
 
     const [messages, setMessages] = useState(allData[index].chatData);
 
-    const setAsyncStorageData = async () => {
-        await AsyncStorage.setItem('allData', JSON.stringify(allData));
+    const setAsyncStorageData = async (changedData) => {
+        await AsyncStorage.setItem('allData', JSON.stringify(changedData));
     }
 
     useEffect(() => {
-        setAsyncStorageData();
-    }, [allData])
-
-    useEffect(() => {
-        setAllData((curr) => {
-            let temp = curr;
+        if (messages.length) {
+            let temp = allData;
             temp[index].chatData = messages;
-            return temp;
-        })
+            setAsyncStorageData(temp);
+            setAllData(temp);
+        }
     }, [messages])
 
     const onSend = useCallback((messages = []) => {

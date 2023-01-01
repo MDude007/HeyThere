@@ -1,16 +1,12 @@
 import { useNavigation } from "@react-navigation/native";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import MapView, { Circle, Marker } from "react-native-maps";
+import { DataContext } from "../../App";
 
-const MapViewComponent = ({ currPosition, allData, setAllData }) => {
-
-    const [state, setState] = useState([]);
-    let x = Math.random() * 0.01;
-    // need to add negative value as well
-    console.log(x.toFixed(5));
-    console.log(allData)
+const MapViewComponent = ({ currPosition }) => {
     const navigation = useNavigation();
+    const { allData, setAllData } = useContext(DataContext);
 
     return (
         <>
@@ -36,7 +32,7 @@ const MapViewComponent = ({ currPosition, allData, setAllData }) => {
                                 {
                                     item.isOnline
                                         ?
-                                        <Marker onPress={() => { navigation.navigate('ChatScreen', { allData: allData, index: id, setAllData: setAllData }) }} coordinate={{
+                                        <Marker onPress={() => { navigation.navigate('ChatScreen', { index: id }) }} coordinate={{
                                             latitude: item.location.latitude,
                                             longitude: item.location.longitude
                                         }}>

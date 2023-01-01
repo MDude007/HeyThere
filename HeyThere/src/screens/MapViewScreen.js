@@ -1,16 +1,19 @@
+import { useContext } from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { DataContext } from "../../App";
 import MapViewComponent from "../components/MapView";
 
 const MapViewScreen = ({ route }) => {
 
-    const { currPosition, allData, setAllData } = route.params;
+    const { currPosition } = route.params;
+    const { allData, setAllData } = useContext(DataContext);
 
     return (
         <View style={styles.mapContainer}>
             {
                 typeof (currPosition.latitude) !== 'undefined'
                     ?
-                    <MapViewComponent currPosition={currPosition} allData={allData} setAllData={setAllData} />
+                    <MapViewComponent currPosition={currPosition} />
                     :
                     <Text style={styles.errorText}>Location Error!</Text>
             }

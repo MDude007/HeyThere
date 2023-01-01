@@ -1,10 +1,11 @@
 import { useNavigation } from "@react-navigation/native";
-import { useEffect } from "react";
+import { useContext } from "react";
 import { FlatList, LogBox, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { DataContext } from "../../App";
 
-const ChatListScreen = ({ route }) => {
+const ChatListScreen = () => {
 
-    const { allData, setAllData } = route.params;
+    const { allData, setAllData } = useContext(DataContext);
     const navigation = useNavigation();
 
     LogBox.ignoreLogs([
@@ -13,7 +14,7 @@ const ChatListScreen = ({ route }) => {
 
     const onItemPress = (item, index) => {
         if (item.isOnline) {
-            navigation.navigate('ChatScreen', { allData: allData, index: index, setAllData: setAllData });
+            navigation.navigate('ChatScreen', { index: index });
         }
         else {
             alert("User is offline or outside 1km radius.")

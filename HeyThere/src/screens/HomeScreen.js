@@ -1,8 +1,11 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
-import { useEffect, useState } from "react";
-import { View, Button, Text, StyleSheet, Platform, PermissionsAndroid, ActivityIndicator } from "react-native";
+import { useContext, useEffect, useState } from "react";
+import { View, Button, Text, StyleSheet, Platform, ActivityIndicator, TouchableOpacity } from "react-native";
 import Geolocation from 'react-native-geolocation-service';
+import { ScrollView } from "react-native-gesture-handler";
+import { check, PERMISSIONS, request, RESULTS } from "react-native-permissions";
+import { DataContext } from "../../App";
 
 const emptyData = [
     {
@@ -71,39 +74,64 @@ const HomeScreen = () => {
     const navigation = useNavigation();
     const [loading, setLoading] = useState(true);
     const [currPosition, setCurrPosition] = useState({});
-    const [allData, setAllData] = useState([]);
+    const { allData, setAllData } = useContext(DataContext);
+    // const [allData, setAllData] = useState([]);
 
     async function requestLocationPermission() {
         if (Platform.OS == 'android') {
             try {
-                const granted = await PermissionsAndroid.request(
-                    PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-                )
-                if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-                    console.log("You can use the location")
-                } else {
-                    console.log("location permission denied")
-                    alert('Location Permission Error!')
+                const locationPermission = await check(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+
+                if (locationPermission == RESULTS.GRANTED) {
+                    findGeoLocation();
                 }
-            } catch (err) {
-                console.warn(err);
-                alert('Location Permission Error!');
+                else if (locationPermission == RESULTS.DENIED || locationPermission == RESULTS.LIMITED) {
+                    const reqResult = await request(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+                    if (reqResult == RESULTS.GRANTED) {
+                        findGeoLocation();
+                    }
+                }
+            } catch (error) {
+                // console.log('try catch: ', error);
             }
         }
         if (Platform.OS === 'ios') {
             try {
-                await Geolocation.requestAuthorization('whenInUse');
+                const locationPermission = await check(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
+
+                if (locationPermission == RESULTS.GRANTED) {
+                    findGeoLocation();
+                }
+                else if (locationPermission == RESULTS.DENIED || locationPermission == RESULTS.LIMITED) {
+                    const reqResult = await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
+                    if (reqResult == RESULTS.GRANTED) {
+                        findGeoLocation();
+                    }
+                }
             } catch (error) {
-                console.log('try catch: ', error);
-                // alert('Location Permission Error!');
+                // console.log('try catch: ', error);
             }
         }
     }
 
+    const findGeoLocation = () => {
+        Geolocation.getCurrentPosition(
+            (position) => {
+                setCurrPosition(position.coords);
+                // console.log(position);
+                setLoading(false);
+            },
+            (error) => {
+                alert(error.message);
+                setLoading(false);
+            },
+            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+        );
+    }
+
     const getStoredData = async () => {
         let storedData = await AsyncStorage.getItem('allData');
-        console.log(storedData);
-        if (typeof (storedData) == 'undefined' || storedData == null || storedData.length == 0) {
+        if (typeof (storedData) == 'undefined' || storedData == null || JSON.parse(storedData).length == 0) {
             await AsyncStorage.setItem('allData', JSON.stringify(emptyData));
             setAllData(emptyData);
         }
@@ -115,18 +143,6 @@ const HomeScreen = () => {
     const callInitailFunctions = () => {
         getStoredData();
         requestLocationPermission();
-        Geolocation.getCurrentPosition(
-            (position) => {
-                setCurrPosition(position.coords);
-                console.log(position);
-                setLoading(false);
-            },
-            (error) => {
-                alert(error.message);
-                setLoading(false);
-            },
-            { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
-        );
     }
 
     useEffect(() => {
@@ -158,27 +174,72 @@ const HomeScreen = () => {
     }, []);
 
     return (
-        <View style={styles.mainContainer}>
+        <ScrollView style={styles.mainContainer} contentContainerStyle={{ justifyContent: 'center' }}>
             {
                 loading
                     ?
                     <ActivityIndicator size='large' />
                     :
-                    <View>
-                        <Text>Hello World</Text>
-                        <Button onPress={() => updateData()} title="Mandatory" />
-                        <Button onPress={() => navigation.navigate('MapViewScreen', { currPosition: currPosition, allData: allData, setAllData: setAllData })} title='Click Me' />
-                        <Button onPress={() => navigation.navigate('ChatListScreen', { allData: allData, setAllData: setAllData })} title='Click Me CHat List' />
-                    </View >
+                    <View style={{ marginBottom: 20 }}>
+                        <View style={styles.instructionsContainer}>
+                            <Text style={styles.instructionsText}>• There are three major screens in this app.</Text>
+                            <Text style={styles.instructionsText}>• Map Screen will show the your current location and all the users online within 1 km radius.
+                                You can tap on particular user to go to his chat.</Text>
+                            <Text style={styles.instructionsText}>• Next is Chat List, which will show list of all the users with indicator showing wheter the
+                                user is online or offline.</Text>
+                            <Text style={styles.instructionsText}>• Finally in the Chat Screen you can chat with respective user. Chat is stored in AsyncStorage.
+                                Since it's static you will receive the same text which you sent.</Text>
+                        </View>
+                        <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('MapViewScreen', { currPosition: currPosition })}>
+                            <Text style={styles.buttonText}>Go to Map View</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.buttonStyle} onPress={() => navigation.navigate('ChatListScreen')}>
+                            <Text style={styles.buttonText}>Go to Chat List</Text>
+                        </TouchableOpacity>
+                    </View>
             }
-        </View>
+        </ScrollView>
     )
 };
 
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
-        backgroundColor: '#e1eefb'
+        backgroundColor: '#e1eefb',
+    },
+    instructionsContainer: {
+        marginTop: 20,
+        marginBottom: 10,
+        marginHorizontal: '10%',
+        backgroundColor: '#78b3ed',
+        borderRadius: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 10
+    },
+    instructionsText: {
+        flex: 1,
+        marginVertical: 5,
+        fontFamily: 'Avenir',
+        fontSize: 16,
+        fontWeight: 'bold',
+        letterSpacing: -0.3,
+        opacity: 0.7
+    },
+    buttonStyle: {
+        backgroundColor: '#78b3ed',
+        height: 100,
+        marginVertical: 10,
+        marginHorizontal: '10%',
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    buttonText: {
+        color: 'white',
+        fontFamily: 'Avenir',
+        fontSize: 24,
+        fontWeight: 'bold',
+        letterSpacing: -0.3
     }
 });
 
