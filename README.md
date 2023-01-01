@@ -8,6 +8,8 @@ https://user-images.githubusercontent.com/26070063/210185147-73615af5-615a-4ada-
 
 ![Simulator Screen Shot - iPhone 13 - 2023-01-02 at 02 59 18](https://user-images.githubusercontent.com/26070063/210185162-28b159dc-970e-4c8e-b6a2-623e2a8d77c4.png | width=100)
 
+<img src="https://user-images.githubusercontent.com/26070063/210185162-28b159dc-970e-4c8e-b6a2-623e2a8d77c4.png" width="100px" />
+
 
 ![Simulator Screen Shot - iPhone 13 - 2023-01-02 at 02 59 55](https://user-images.githubusercontent.com/26070063/210185166-8960f1d1-52be-4217-9ace-11d09f0f440b.png)
 
