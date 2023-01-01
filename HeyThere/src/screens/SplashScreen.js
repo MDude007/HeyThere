@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     iconStyle: {
         width: 75,
         height: 75,
-        color: 'white'
+        color: 'white',
     },
     titleTextStyle: {
         fontFamily: 'Papyrus',
