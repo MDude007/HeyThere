@@ -15,7 +15,7 @@ const MyStack = () => {
                 headerShown: false
             }} />
             <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
-                title: "Home",
+                title: "Home Screen",
                 headerTitleStyle: {
                     color: 'black',
                     fontFamily: 'Didot',
